@@ -1,0 +1,375 @@
+/* General Styles */
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+nav {
+    background: #1f1f1f;
+    padding: 15px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between the two images */
+}
+
+/* WeMotix Text Image */
+.weMotix-text {
+    height: 40px; /* Adjust as needed */
+}
+
+/* Brand Logo */
+.brand-logo {
+    width: 70px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #0057b3; /* Blue Hover */
+    border-radius: 5px;
+}
+
+.nav-links .active {
+    color: #ffd700;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Hero Section Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px; /* Added more space */
+}
+
+.tabs button {
+    font-size: 20px;
+    padding: 12px 24px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tabs button.active {
+    background: orange; /* Yellow Active Tab */
+    border: none;
+}
+
+
+/* Movie Grid */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 80px; /* Increased margin */
+    padding: 30px;
+    margin: 0 150px; /* Added side margins */
+    margin-bottom: 25px;
+}
+
+/* Movie Cards */
+.movie-card {
+    background: #222;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 85%;
+    border-radius: 5px;
+}
+
+.movie-card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.movie-card:hover {
+    transform: scale(1.08); /* Enlarges when hovered */
+}
+
+.movie-card:not(:hover) {
+    transform: scale(1); /* Shrinks back smoothly */
+}
+
+
+/* Dark Mode Popup with Increased Height */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 450px;
+    background: #1a1a1a;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Popup Content - Side Layout */
+.popup-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    height: 100%; /* Match the pop-up height */
+}
+
+
+/* Popup Video */
+.popup-video {
+    width: 50%;
+    height: 460px;
+    border-radius: 10px;
+}
+
+/* Popup Details (Title & Description) */
+.popup-details {
+    width: 50%;
+}
+
+/* "Buy Tickets" Button in Popup */
+.popup .buy-ticket {
+    background: #0057b3;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+    width: fit-content;
+}
+
+
+
+.now-showing-title {
+    font-size: 34px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+
+
+
+/* Movies Page - Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f1f1f;
+}
+
+/* Social Media Icons */
+.social-icons img {
+    width: 40px; /* Uniform size */
+    margin: 10px 20px;
+    margin-bottom: 20px;
+}
+
+/* Footer Links */
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.footer-links a:hover {
+    color: #ffd700; /* Yellow Hover */
+}
+ #logout-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#logout-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+@media (max-width: 1366px) {
+    /* Movie Grid */
+    .movie-grid {
+        grid-template-columns: repeat(4, 1fr); /* Keep 4 columns for smaller screens */
+        gap: 30px; /* Maintain consistent spacing */
+        margin: 0 50px; /* Adjust side margins */
+    }
+
+    /* Movie Cards */
+    .movie-card {
+        padding: 15px; /* Keep consistent padding */
+        height: auto; /* Allow cards to adjust height dynamically */
+    }
+
+    .movie-card img {
+        width: 100%; /* Ensure images take full width of the card */
+        height: auto; /* Maintain aspect ratio to prevent stretching */
+        border-radius: 5px; /* Keep rounded corners */
+        object-fit: cover; /* Ensure the image fits properly */
+    }
+
+    /* Movie Titles */
+    .movie-card h3 {
+        font-size: 16px; /* Slightly reduce font size for smaller screens */
+        margin-top: 10px; /* Adjust spacing above the title */
+    }
+
+    /* Buy Tickets Button */
+    .buy-ticket {
+        font-size: 14px; /* Slightly reduce button font size */
+        padding: 8px 12px; /* Adjust padding for smaller screens */
+    }
+
+/* Movie Cards */
+.movie-card img {
+    width: 100%; /* Ensure the image takes the full width of the card */
+    height: 300px; /* Set a fixed height for all posters */
+    object-fit: cover; /* Maintain aspect ratio and crop excess */
+    border-radius: 5px; /* Keep rounded corners */
+}
+
+}
+
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    /* General Styles */
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 0 10px; /* Add padding for smaller screens */
+    }
+    /* Navigation Bar */
+    .nav-container {
+        flex-direction: column; /* Stack logo and links vertically */
+        align-items: center; /* Center align the content */
+        gap: 15px; /* Add spacing between logo and links */
+    }
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Add spacing between links */
+        text-align: center; /* Center align the links */
+    }
+    .nav-links li a {
+        padding: 10px 20px; /* Increase padding for better touch targets */
+        font-size: 16px; /* Adjust font size for readability */
+        width: 100%; /* Make links take full width */
+        display: block; /* Ensure links are block elements */
+    }
+    /* Hero Section Tabs */
+    .tabs {
+        flex-direction: column; /* Stack tabs vertically */
+        gap: 10px; /* Add spacing between tabs */
+    }
+    .tabs button {
+        font-size: 16px; /* Reduce button size */
+        padding: 10px 15px; /* Adjust padding */
+    }
+    /* Movie Grid */
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr); /* Show 2 columns instead of 4 */
+        gap: 20px; /* Reduce gap between items */
+        margin: 0 10px; /* Reduce side margins */
+    }
+    /* Movie Cards */
+    .movie-card {
+        padding: 10px; /* Reduce padding */
+    }
+    .movie-card img {
+        height: auto; /* Allow image to resize proportionally */
+    }
+    /* Popup */
+    .popup {
+        width: 90%; /* Adjust popup width for smaller screens */
+        height: auto; /* Allow height to adjust dynamically */
+    }
+    .popup-content {
+        flex-direction: column; /* Stack video and details vertically */
+        gap: 20px; /* Add spacing between sections */
+    }
+    .popup-video {
+        width: 100%; /* Full width for video */
+        height: auto; /* Adjust height proportionally */
+    }
+    .popup-details {
+        width: 100%; /* Full width for details */
+    }
+    /* Footer */
+    footer {
+        padding: 15px; /* Reduce footer padding */
+    }
+    .social-icons img {
+        width: 30px; /* Reduce icon size */
+        margin: 5px; /* Adjust spacing */
+    }
+    .footer-links a {
+        font-size: 14px; /* Reduce font size */
+    }
+     #logout-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#logout-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+}
